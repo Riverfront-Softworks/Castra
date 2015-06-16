@@ -46,7 +46,7 @@ Temporary Items
 # Unity generated #
 # =============== #
 Temp/
-Library/
+Library
 
 # ===================================== #
 # Visual Studio / MonoDevelop generated #
@@ -73,3 +73,6 @@ obj/
 .Trashes
 ehthumbs.db
 Thumbs.db
+Library/assetDatabase3
+Library/AssetServerCacheV3
+Library/assetDatabase3
