@@ -47,12 +47,14 @@ Temporary Items
 # =============== #
 Temp/
 Library/
+Target/
 
 # ===================================== #
 # Visual Studio / MonoDevelop generated #
 # ===================================== #
 ExportedObj/
 obj/
+bin/
 *.svd
 *.userprefs
 /*.csproj
