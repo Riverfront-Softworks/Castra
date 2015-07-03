@@ -14,6 +14,7 @@ public class MainMenu : MonoBehaviour
         mainMenu = gameObject.GetComponent("MainMenuCanvas") as Canvas;
         instructionText = (Text)GameObject.Find("Instructions").GetComponent(typeof(Text));
         titleText = (Text)GameObject.Find("Title").GetComponent(typeof(Text));
+        Cursor.visible = true;
     }
 
     // Update is called once per frame
