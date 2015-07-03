@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
       gameUICanvas = gameObject.GetComponent("GameUICanvas") as Canvas;
       instructionText = (Text)GameObject.Find("Instructions").GetComponent(typeof(Text));
       phaseText = (Text)GameObject.Find("Phase").GetComponent(typeof(Text));
+      Cursor.visible = true;
     }
 
     // Update is called once per frame
