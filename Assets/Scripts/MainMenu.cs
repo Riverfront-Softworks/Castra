@@ -24,7 +24,7 @@ public class MainMenu : MonoBehaviour
         {
             Application.Quit();
         }
-        else if (Input.anyKey)
+        else if (Input.anyKey && !Input.GetMouseButtonDown(0))
         {
             Application.LoadLevel("game");
         }
