@@ -9,8 +9,8 @@ public class GameManager : MonoBehaviour
   Canvas gameUICanvas;
   Text phaseText;
   Text instructionText;
+  Camera camera;
   int currentPhase = 0;
-
 
     // Use this for initialization
     void Start()
@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour
       instructionText = (Text)GameObject.Find("Instructions").GetComponent(typeof(Text));
       phaseText = (Text)GameObject.Find("Phase").GetComponent(typeof(Text));
       Cursor.visible = true;
+      camera = GetComponent<Camera>();
     }
 
     // Update is called once per frame
@@ -32,6 +33,15 @@ public class GameManager : MonoBehaviour
         {
             currentPhase = (currentPhase + 1) % 3;
             phaseText.text = "Phase: " + (GamePhase)currentPhase;
+        }
+
+        if(GamePhase.Fortify == (GamePhase)currentPhase && Input.GetMouseButtonDown(0)){
+
+                    GameObject cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
+                    Vector3 worldLoc = camera.ScreenToWorldPoint(new Vector3 (Input.mousePosition.x,Input.mousePosition.y,Input.mousePosition.z));
+                    worldLoc.z = 0;
+                    print("Position " + worldLoc.x + ", " + worldLoc.y + ", " + worldLoc.z);
+                    cube.transform.position = worldLoc;
         }
     }
 }
